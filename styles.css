@@ -5,6 +5,7 @@
   --gold: #c8a23a;
   --bg: #f7f5f2;
   --text: #2b1f3a;
+  --bar-width: 0.75in;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
@@ -28,7 +29,7 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 0.75in;
+  width: var(--bar-width);
   display: flex;
   flex-direction: row;
   z-index: 0;
@@ -54,6 +55,7 @@ body {
 .hero {
   text-align: center;
   padding: 48px 24px;
+  padding-left: calc(24px + var(--bar-width));
   min-height: 100vh;
   flex: 1;
   display: flex;
@@ -85,7 +87,7 @@ body {
 }
 
 .logo {
-  width: min(320px, 70vw);
+  width: min(320px, calc(100vw - var(--bar-width) - 48px));
   height: auto;
   display: block;
   margin: 0 auto 28px;
