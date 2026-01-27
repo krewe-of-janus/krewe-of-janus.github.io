@@ -5,7 +5,8 @@
   --gold: #c8a23a;
   --bg: #f7f5f2;
   --text: #2b1f3a;
-  --bar-width: 0.75in;
+  --single-bar: 0.25in;
+  --bar-width: calc(var(--single-bar) * 3);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
@@ -22,6 +23,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-left: var(--bar-width);
 }
 
 .side-bars {
@@ -36,7 +38,8 @@ body {
 }
 
 .side-bar {
-  width: 0.25in;
+  width: var(--single-bar);
+  flex: 0 0 var(--single-bar);
   height: 100%;
 }
 
@@ -55,7 +58,6 @@ body {
 .hero {
   text-align: center;
   padding: 48px 24px;
-  padding-left: calc(24px + var(--bar-width));
   min-height: 100vh;
   flex: 1;
   display: flex;
@@ -64,6 +66,7 @@ body {
   justify-content: center;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .title-block {
@@ -87,7 +90,8 @@ body {
 }
 
 .logo {
-  width: min(320px, calc(100vw - var(--bar-width) - 48px));
+  width: min(320px, 70vw);
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto 28px;
