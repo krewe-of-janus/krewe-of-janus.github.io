@@ -7,6 +7,8 @@
   --text: #2b1f3a;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -62,6 +64,26 @@ body {
   z-index: 1;
 }
 
+.title-block {
+  margin-bottom: 20px;
+}
+
+.title-block h1 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw + 1rem, 3.25rem);
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.subhead {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(43, 31, 58, 0.6);
+}
+
 .logo {
   width: min(320px, 70vw);
   height: auto;
@@ -73,17 +95,17 @@ body {
 .contact {
   font-size: 1.05rem;
   letter-spacing: 0.02em;
-  color: var(--purple);
+  color: rgba(43, 31, 58, 0.6);
   text-decoration: none;
   padding-bottom: 4px;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 2px solid rgba(43, 31, 58, 0.6);
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .contact:hover,
 .contact:focus-visible {
-  color: var(--green);
-  border-bottom-color: var(--green);
+  color: rgba(43, 31, 58, 0.6);
+  border-bottom-color: rgba(43, 31, 58, 0.6);
 }
 
 .copyright {
