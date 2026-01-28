@@ -98,24 +98,156 @@ body {
   filter: drop-shadow(0 8px 20px rgba(43, 31, 58, 0.15));
 }
 
-.contact {
+.page-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.page-links a {
   font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(43, 31, 58, 0.6);
   text-decoration: none;
-  padding-bottom: 0;
-  border-bottom: none;
   transition: color 0.2s ease;
 }
 
-.contact:hover,
-.contact:focus-visible {
+.page-links a:hover,
+.page-links a:focus-visible {
+  color: rgba(43, 31, 58, 0.85);
+}
+
+.contact-section {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-header {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: rgba(43, 31, 58, 0.6);
+  font-weight: 500;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.icon-link {
+  color: rgba(43, 31, 58, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: rgba(43, 31, 58, 0.8);
+  background-color: rgba(43, 31, 58, 0.06);
 }
 
 .copyright {
   margin: auto 0 16px;
   font-size: 0.85rem;
   color: rgba(43, 31, 58, 0.45);
+}
+
+.page {
+  padding: 40px 24px 64px;
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.page-logo {
+  width: min(200px, 40vw);
+  height: auto;
+  display: block;
+  margin: 16px auto 20px;
+}
+
+.page-title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 2.75rem);
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 24px;
+  color: var(--text);
+}
+
+.page-content {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.page-court .page-content {
+  text-align: center;
+}
+
+.page-court .page-content ul {
+  justify-items: center;
+}
+
+.page-lead {
+  font-weight: 600;
+  color: var(--purple);
+  margin: 0 0 6px;
+}
+
+.page-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.year-list li {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.year-list .year {
+  font-variant-numeric: tabular-nums;
+  color: rgba(43, 31, 58, 0.65);
+  min-width: 64px;
+}
+
+.queen-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 700px) {
+  .queen-columns {
+    grid-template-columns: 1fr;
+  }
 }
