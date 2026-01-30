@@ -206,6 +206,21 @@ body {
   line-height: 1.6;
 }
 
+.history-thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0 24px;
+}
+
+.history-thumbs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(43, 31, 58, 0.12);
+}
+
 .page-court .page-content {
   text-align: center;
 }
@@ -292,5 +307,9 @@ body {
 
   .court-card img {
     width: min(240px, 80vw);
+  }
+
+  .history-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

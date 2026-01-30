@@ -9,6 +9,6 @@ Single-page static site for Krewe of Janus with a centered logo, title/subhead, 
 - Janus Logo.png: Main logo image referenced by the page.
 
 ## Layout Notes
-- Left side bars are fixed and span the full height of the viewport.
+- Left sidebars are fixed and span the full height of the viewport.
 - Content is centered vertically and horizontally within the remaining space.
 - The copyright line stays pinned to the bottom of the visible screen.
