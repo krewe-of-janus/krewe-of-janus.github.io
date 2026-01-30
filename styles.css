@@ -217,7 +217,42 @@ body {
 .page-lead {
   font-weight: 600;
   color: var(--purple);
+  font-size: 1.8rem;
   margin: 0 0 6px;
+}
+
+.court-queen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.court-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  justify-items: center;
+  margin-top: 24px;
+}
+
+.court-card {
+  margin: 0;
+  text-align: center;
+}
+
+.court-card img {
+  width: min(220px, 60vw);
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(43, 31, 58, 0.15);
+}
+
+.court-card figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 .page-content ul {
@@ -249,5 +284,13 @@ body {
 @media (max-width: 700px) {
   .queen-columns {
     grid-template-columns: 1fr;
+  }
+
+  .court-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .court-card img {
+    width: min(240px, 80vw);
   }
 }
