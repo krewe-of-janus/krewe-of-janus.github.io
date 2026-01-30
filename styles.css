@@ -170,9 +170,13 @@ body {
 }
 
 .copyright {
-  margin: auto 0 16px;
+  margin-top: auto;
+  margin-bottom: 16px;
+  padding-top: 24px;
   font-size: 0.85rem;
   color: rgba(43, 31, 58, 0.45);
+  text-align: center;
+  width: 100%;
 }
 
 .page {
@@ -182,6 +186,9 @@ body {
   width: 100%;
   position: relative;
   z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-logo {
