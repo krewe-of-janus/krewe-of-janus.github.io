@@ -224,8 +224,13 @@ body {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center top;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(43, 31, 58, 0.12);
+}
+
+.history-thumbs img.crop-top {
+  object-position: center bottom;
 }
 
 .page-court .page-content {
