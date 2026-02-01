@@ -33,7 +33,11 @@
           humorous skits depicting scenes related to the theme in its Grand
           Finale.
         </p>
-        <div class="history-thumbs" data-count="5" aria-label="History photos"></div>
+        <div
+          class="history-thumbs"
+          data-count="5"
+          aria-label="History photos"
+        ></div>
         <p>
           After staging successful balls in 1949 and 1950, Janus paused its
           activity for a few years while their members were recalled to military
@@ -42,7 +46,11 @@
           one of the longest serving captains in local Carnival circles. Chuck
           Dickey, his son, then took over as captain.
         </p>
-        <div class="history-thumbs" data-count="5" aria-label="History photos"></div>
+        <div
+          class="history-thumbs"
+          data-count="5"
+          aria-label="History photos"
+        ></div>
         <p>
           Ball dates were assigned in the Auditorium according to seniority and
           as a result, Janus and many others staged their balls on a weeknight.
@@ -52,7 +60,11 @@
           the Auditorium in 1987 and moved to a downtown hotel where the ball
           has been staged ever since.
         </p>
-        <div class="history-thumbs" data-count="5" aria-label="History photos"></div>
+        <div
+          class="history-thumbs"
+          data-count="5"
+          aria-label="History photos"
+        ></div>
         <p>
           Formerly a West Bank-based group, today's members of Janus come from a
           variety of communities in several states. And though their addresses
@@ -64,13 +76,21 @@
           officials, billboard lawyers, and the Sewerage and Water Board. One
           never knows what to expect at a Janus ball.
         </p>
-        <div class="history-thumbs" data-count="5" aria-label="History photos"></div>
+        <div
+          class="history-thumbs"
+          data-count="5"
+          aria-label="History photos"
+        ></div>
         <p>
-          Chuck Dickey stepped down as Captain after 14 years in 2023, and
-          combined he and his father directed the Krewe's activities for a
-          combined 71 years.
+          Chuck Dickey stepped down as Captain after 14 years in 2023. Combined,
+          he and his father directed the Krewe's activities for a combined 71
+          years.
         </p>
-        <div class="history-thumbs" data-count="5" aria-label="History photos"></div>
+        <div
+          class="history-thumbs"
+          data-count="5"
+          aria-label="History photos"
+        ></div>
       </section>
       <p class="copyright">Copyright 2026 Krewe of Janus</p>
     </main>
@@ -115,13 +135,13 @@
     </script>
     <script>
       const containers = Array.from(
-        document.querySelectorAll('.history-thumbs')
+        document.querySelectorAll(".history-thumbs"),
       );
       const totalNeeded = containers.reduce(
         (sum, el) => sum + Number(el.dataset.count || 0),
-        0
+        0,
       );
-      const dataTag = document.getElementById('history-images-data');
+      const dataTag = document.getElementById("history-images-data");
       const data = JSON.parse(dataTag.textContent || '{"images": []}');
       const images = [...(data.images || [])];
       for (let i = images.length - 1; i > 0; i -= 1) {
@@ -138,11 +158,11 @@
         index += count;
 
         chunk.forEach((item) => {
-          const img = document.createElement('img');
+          const img = document.createElement("img");
           img.src = `images/history/${item.file}`;
           img.alt = `History photo ${item.file}`;
-          if (item['crop-direction'] === 'top') {
-            img.classList.add('crop-top');
+          if (item["crop-direction"] === "top") {
+            img.classList.add("crop-top");
           }
           container.appendChild(img);
         });
